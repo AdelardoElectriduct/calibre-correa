@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de talla de reloj según tu muñeca | Calibre & Correa</title>
+<meta name="description" content="Calcula el diámetro de caja de reloj recomendado según la circunferencia de tu muñeca.">
+<link rel="canonical" href="https://calibre-correa.pages.dev/herramienta-talla-reloj.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<!-- Cuando tengas tu ID de Google Analytics / Search Console, el snippet de verificación va aquí. No se incluye ninguno por defecto. -->
+
+</head>
+<body>
+<header class="site">
+  <div class="navbar">
+    <a href="/index.html" class="brand">Calibre <span>&amp;</span> Correa</a>
+    <button class="nav-toggle" id="navToggle">Menú</button>
+    <nav class="links" id="navLinks">
+      <a href="/index.html">Inicio</a>
+      <a href="/comparador.html">Comparador</a>
+      <a href="/categoria-automaticos.html">Categorías</a>
+      <a href="/guia-relojes-automaticos-entrada.html">Guías</a>
+      <a href="/herramienta-talla-reloj.html" class="active">Herramienta</a>
+      <a href="/ofertas.html">Ofertas</a>
+    </nav>
+  </div>
+</header>
+<div id="app">
+<div class="wrap" style="padding-top:40px;">
+  <div class="ad-slot ad-banner">Espacio reservado para más adelante (sin anuncios activos todavía)</div>
+  <div class="section-head"><h2>Calculadora de talla de caja según tu muñeca</h2>
+    <div class="sub">Mide la circunferencia de tu muñeca con una cinta métrica y te sugerimos un rango de diámetro de caja cómodo.</div></div>
+  <div class="tool-box">
+    <label for="muneca">Circunferencia de tu muñeca (cm)</label>
+    <input type="number" id="muneca" min="12" max="24" step="0.5" placeholder="Ej: 17.5">
+    <button class="btn btn-primary" id="calcBtn">Calcular talla recomendada</button>
+    <div id="resultadoCalc"></div>
+  </div>
+</div>
+</div>
+<footer class="site">
+  <div class="wrap">
+    <div>&copy; <span id="year"></span> Calibre &amp; Correa</div>
+    <div style="display:flex;gap:18px;">
+      <a href="/aviso-legal-afiliados.html">Aviso legal de afiliados</a>
+      <a href="/guia-relojes-automaticos-entrada.html">Guías de compra</a>
+      <a href="/comparador.html">Comparador</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("navToggle").onclick = ()=> document.getElementById("navLinks").classList.toggle("open");</script>
+<script src="/js/herramienta.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://calibre-correa.pages.dev/sitemap.xml
