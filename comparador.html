@@ -5,19 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comparador de relojes | Calibre & Correa</title>
 <meta name="description" content="Compara relojes lado a lado: ficha técnica, precio y valoraciones superpuestas.">
-<link rel="canonical" href="https://calibre-correa.pages.dev/comparador.html">
+<link rel="canonical" href="https://calibre-correa.adelardo.workers.dev/comparador.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Comparador de relojes | Calibre & Correa">
+<meta property="og:description" content="Compara relojes lado a lado: ficha técnica, precio y valoraciones superpuestas.">
+<meta property="og:url" content="https://calibre-correa.adelardo.workers.dev/comparador.html">
+<meta property="og:site_name" content="Calibre & Correa">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Comparador de relojes | Calibre & Correa">
+<meta name="twitter:description" content="Compara relojes lado a lado: ficha técnica, precio y valoraciones superpuestas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 <!-- Cuando tengas tu ID de Google Analytics / Search Console, el snippet de verificación va aquí. No se incluye ninguno por defecto. -->
 
+
 </head>
 <body>
 <header class="site">
   <div class="navbar">
     <a href="/index.html" class="brand">Calibre <span>&amp;</span> Correa</a>
-    <button class="nav-toggle" id="navToggle">Menú</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">Menú</button>
     <nav class="links" id="navLinks">
       <a href="/index.html">Inicio</a>
       <a href="/comparador.html" class="active">Comparador</a>
@@ -48,7 +58,12 @@
   </div>
 </footer>
 <script>document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("navToggle").onclick = ()=> document.getElementById("navLinks").classList.toggle("open");</script>
+document.getElementById("navToggle").onclick = ()=>{
+  const links = document.getElementById("navLinks");
+  const btn = document.getElementById("navToggle");
+  const open = links.classList.toggle("open");
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+};</script>
 <script>const PRODUCTS = [{"id": "seiko-5-sports", "marca": "Seiko", "modelo": "5 Sports Automático (SRPD)", "initials": "S5", "color": "#5b6b7a", "precio": "229", "hook": "El clásico de entrada: automático japonés fiable y con estética de buceo.", "categorias": ["automaticos", "resistentes"], "specs": [["Movimiento", "Automático Seiko Calibre 4R36"], ["Reserva de marcha", "41 horas"], ["Diámetro de caja", "42,5 mm"], ["Grosor", "13,4 mm"], ["Resistencia al agua", "100 m"], ["Cristal", "Hardlex mineral"], ["Correa", "Acero inoxidable / NATO / caucho (según versión)"], ["Fondo", "Transparente (visible el movimiento)"]], "pros": ["Movimiento automático propio, sin batería", "100 m de resistencia al agua para uso diario y baño", "Precio de entrada dentro de la relojería mecánica seria", "Piezas y servicio técnico Seiko fáciles de encontrar"], "contras": ["El cristal Hardlex se raya más que un zafiro", "Precisión de gama de entrada (varios segundos al día)", "Corona sin rosca: no es un reloj de inmersión certificado"], "ideal": "Quien quiere su primer reloj automático de verdad sin asumir el salto de precio a marcas suizas.", "resenas": "Las reseñas coinciden en el mismo patrón: la relación calidad-precio y la solidez del 4R36 se valoran mucho más que el acabado del cristal, que es el punto que más se repite como mejorable.", "val": {"diseno": 7, "robustez": 8, "precision": 6, "versatilidad": 8, "precio": 9}, "enlace": "https://www.amazon.com/dp/B0DNNSBCNP"}, {"id": "citizen-tsuyosa", "marca": "Citizen", "modelo": "Tsuyosa Automático NJ0151-53M", "initials": "CT", "color": "#7c95a8", "precio": "329", "hook": "Brazalete integrado años 70 con un acabado que parece de una gama superior.", "categorias": ["automaticos", "vestir"], "specs": [["Movimiento", "Automático Citizen Calibre 8210"], ["Reserva de marcha", "40 horas"], ["Diámetro de caja", "40 mm"], ["Grosor", "≈ 12 mm"], ["Resistencia al agua", "50 m"], ["Cristal", "Zafiro con tratamiento antirreflejante"], ["Correa", "Brazalete integrado de acero"], ["Fondo", "Transparente (visible el movimiento)"]], "pros": ["Diseño de brazalete integrado poco habitual a este precio", "Cristal de zafiro, más resistente a los arañazos que el mineral", "Acabado y proporciones que se perciben por encima de su gama", "Muy cómodo por el diseño en cuña del brazalete"], "contras": ["50 m de resistencia al agua es justo para nadar, no para bucear", "El brazalete integrado no admite cualquier correa de repuesto", "El cierre no tiene micro-ajuste"], "ideal": "Quien busca un reloj con más personalidad de diseño que un deportivo clásico, para uso de oficina y diario.", "resenas": "El comentario más repetido en reseñas es la sorpresa por el acabado del brazalete integrado a este precio; el punto débil que más se menciona es la resistencia al agua limitada frente a otros automáticos de la misma franja.", "val": {"diseno": 9, "robustez": 6, "precision": 6, "versatilidad": 7, "precio": 8}, "enlace": "https://www.amazon.com/dp/B0CDCQ1N3H"}, {"id": "tissot-prx-quartz", "marca": "Tissot", "modelo": "PRX Cuarzo T137.410.11.041.00", "initials": "TP", "color": "#b08d57", "precio": "395", "hook": "El icónico diseño de los 70 con la precisión y el bajo mantenimiento del cuarzo suizo.", "categorias": ["cuarzo", "vestir", "resistentes"], "specs": [["Movimiento", "Cuarzo suizo ETA F06.115"], ["Reserva de marcha", "No aplica (batería)"], ["Diámetro de caja", "40 x 39,5 mm (tonneau)"], ["Grosor", "10,4 mm"], ["Resistencia al agua", "100 m"], ["Cristal", "Zafiro con tratamiento antirreflejante"], ["Correa", "Brazalete de acero de liberación rápida"], ["Fondo", "Cerrado"]], "pros": ["Precisión de cuarzo suizo, mantenimiento mínimo", "Diseño tonneau reconocible inspirado en Gérald Genta", "100 m de resistencia al agua, el más alto de los tres", "Brazalete de liberación rápida, fácil de cambiar por correa"], "contras": ["Al ser de cuarzo pierde el atractivo mecánico para algunos coleccionistas", "La batería hay que sustituirla cada varios años", "Es el más caro de los tres comparados"], "ideal": "Quien prioriza el diseño y la precisión diaria por encima de tener un movimiento mecánico.", "resenas": "En las reseñas se repite el mismo argumento: el diseño del caso tonneau es el motivo de compra número uno, y el debate recurrente es si merece la pena frente a la versión automática Powermatic 80 de la misma familia.", "val": {"diseno": 9, "robustez": 8, "precision": 9, "versatilidad": 8, "precio": 7}, "enlace": "https://www.amazon.com/dp/B08TB1MF6F"}];</script>
 <script src="/js/radar.js"></script>
 <script src="/js/comparador.js"></script>

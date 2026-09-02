@@ -99,3 +99,5 @@ article.guide p{color:var(--paper-dim);}
 footer.site{padding:40px 0;}
 footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.85rem;color:var(--steel);}
 footer.site a:hover{color:var(--bronze-soft);}
+a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--bronze-soft);outline-offset:2px;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}

@@ -5,19 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ofertas de relojes | Calibre & Correa</title>
 <meta name="description" content="Bajadas de precio puntuales en relojes automáticos y de cuarzo.">
-<link rel="canonical" href="https://calibre-correa.pages.dev/ofertas.html">
+<link rel="canonical" href="https://calibre-correa.adelardo.workers.dev/ofertas.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ofertas de relojes | Calibre & Correa">
+<meta property="og:description" content="Bajadas de precio puntuales en relojes automáticos y de cuarzo.">
+<meta property="og:url" content="https://calibre-correa.adelardo.workers.dev/ofertas.html">
+<meta property="og:site_name" content="Calibre & Correa">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ofertas de relojes | Calibre & Correa">
+<meta name="twitter:description" content="Bajadas de precio puntuales en relojes automáticos y de cuarzo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 <!-- Cuando tengas tu ID de Google Analytics / Search Console, el snippet de verificación va aquí. No se incluye ninguno por defecto. -->
 
+
 </head>
 <body>
 <header class="site">
   <div class="navbar">
     <a href="/index.html" class="brand">Calibre <span>&amp;</span> Correa</a>
-    <button class="nav-toggle" id="navToggle">Menú</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">Menú</button>
     <nav class="links" id="navLinks">
       <a href="/index.html">Inicio</a>
       <a href="/comparador.html">Comparador</a>
@@ -32,17 +42,17 @@
 <div class="wrap" style="padding-top:40px;">
   <div class="section-head"><h2>Ofertas</h2><div class="sub">Sección en preparación: aún sin enlaces de afiliado activos.</div></div>
   <div class="catalog-item">
-  <div class="watchface" style="background:#5b6b7a">S5</div>
+  <div class="watchface" style="background:#5b6b7a" role="img" aria-label="Seiko 5 Sports Automático (SRPD)">S5</div>
   <div><h3><a href="/reloj-seiko-5-sports.html">Seiko 5 Sports Automático (SRPD)</a></h3><div class="hook">El clásico de entrada: automático japonés fiable y con estética de buceo.</div></div>
   <div class="spec-strip"><span><b>42,5 mm</b></span><span><b>100 m</b></span><span>Automático</span></div>
   <div class="buy-col"><span class="price">229 €</span><a class="btn btn-ghost" href="/reloj-seiko-5-sports.html">Ver ficha</a></div>
 </div><div class="catalog-item">
-  <div class="watchface" style="background:#7c95a8">CT</div>
+  <div class="watchface" style="background:#7c95a8" role="img" aria-label="Citizen Tsuyosa Automático NJ0151-53M">CT</div>
   <div><h3><a href="/reloj-citizen-tsuyosa.html">Citizen Tsuyosa Automático NJ0151-53M</a></h3><div class="hook">Brazalete integrado años 70 con un acabado que parece de una gama superior.</div></div>
   <div class="spec-strip"><span><b>40 mm</b></span><span><b>50 m</b></span><span>Automático</span></div>
   <div class="buy-col"><span class="price">329 €</span><a class="btn btn-ghost" href="/reloj-citizen-tsuyosa.html">Ver ficha</a></div>
 </div><div class="catalog-item">
-  <div class="watchface" style="background:#b08d57">TP</div>
+  <div class="watchface" style="background:#b08d57" role="img" aria-label="Tissot PRX Cuarzo T137.410.11.041.00">TP</div>
   <div><h3><a href="/reloj-tissot-prx-quartz.html">Tissot PRX Cuarzo T137.410.11.041.00</a></h3><div class="hook">El icónico diseño de los 70 con la precisión y el bajo mantenimiento del cuarzo suizo.</div></div>
   <div class="spec-strip"><span><b>40 x 39,5 mm (tonneau)</b></span><span><b>100 m</b></span><span>Cuarzo</span></div>
   <div class="buy-col"><span class="price">395 €</span><a class="btn btn-ghost" href="/reloj-tissot-prx-quartz.html">Ver ficha</a></div>
@@ -60,7 +70,12 @@
   </div>
 </footer>
 <script>document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("navToggle").onclick = ()=> document.getElementById("navLinks").classList.toggle("open");</script>
+document.getElementById("navToggle").onclick = ()=>{
+  const links = document.getElementById("navLinks");
+  const btn = document.getElementById("navToggle");
+  const open = links.classList.toggle("open");
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+};</script>
 
 </body>
 </html>

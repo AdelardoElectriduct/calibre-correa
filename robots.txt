@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
- 
+
 Sitemap: https://calibre-correa.adelardo.workers.dev/sitemap.xml

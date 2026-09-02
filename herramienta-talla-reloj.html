@@ -5,19 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calculadora de talla de reloj según tu muñeca | Calibre & Correa</title>
 <meta name="description" content="Calcula el diámetro de caja de reloj recomendado según la circunferencia de tu muñeca.">
-<link rel="canonical" href="https://calibre-correa.pages.dev/herramienta-talla-reloj.html">
+<link rel="canonical" href="https://calibre-correa.adelardo.workers.dev/herramienta-talla-reloj.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de talla de reloj según tu muñeca | Calibre & Correa">
+<meta property="og:description" content="Calcula el diámetro de caja de reloj recomendado según la circunferencia de tu muñeca.">
+<meta property="og:url" content="https://calibre-correa.adelardo.workers.dev/herramienta-talla-reloj.html">
+<meta property="og:site_name" content="Calibre & Correa">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Calculadora de talla de reloj según tu muñeca | Calibre & Correa">
+<meta name="twitter:description" content="Calcula el diámetro de caja de reloj recomendado según la circunferencia de tu muñeca.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 <!-- Cuando tengas tu ID de Google Analytics / Search Console, el snippet de verificación va aquí. No se incluye ninguno por defecto. -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo mido la circunferencia de mi muñeca?", "acceptedAnswer": {"@type": "Answer", "text": "Rodea tu muñeca con una cinta métrica flexible (o un hilo y luego mídelo con una regla), justo por donde apoya el reloj, sin apretar."}}, {"@type": "Question", "name": "¿El resultado es una medida exacta?", "acceptedAnswer": {"@type": "Answer", "text": "Es una recomendación orientativa basada en proporciones habituales. El gusto personal y el estilo del reloj (deportivo, de vestir) también influyen."}}, {"@type": "Question", "name": "¿Por qué dos relojes del mismo diámetro se ven distintos en la muñeca?", "acceptedAnswer": {"@type": "Answer", "text": "El lug-to-lug (la distancia de extremo a extremo de la caja) y el grosor también afectan a cómo se percibe el tamaño, no solo el diámetro."}}]}</script>
 
 </head>
 <body>
 <header class="site">
   <div class="navbar">
     <a href="/index.html" class="brand">Calibre <span>&amp;</span> Correa</a>
-    <button class="nav-toggle" id="navToggle">Menú</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">Menú</button>
     <nav class="links" id="navLinks">
       <a href="/index.html">Inicio</a>
       <a href="/comparador.html">Comparador</a>
@@ -35,11 +45,29 @@
     <div class="sub">Mide la circunferencia de tu muñeca con una cinta métrica y te sugerimos un rango de diámetro de caja cómodo.</div></div>
   <div class="tool-box">
     <label for="muneca">Circunferencia de tu muñeca (cm)</label>
-    <input type="number" id="muneca" min="12" max="24" step="0.5" placeholder="Ej: 17.5">
+    <input type="number" id="muneca" min="12" max="24" step="0.5" placeholder="Ej: 17.5" inputmode="decimal" aria-describedby="resultadoCalc">
     <button class="btn btn-primary" id="calcBtn">Calcular talla recomendada</button>
-    <div id="resultadoCalc"></div>
+    <div id="resultadoCalc" role="status" aria-live="polite"></div>
   </div>
 </div>
+<section><div class="wrap two-col">
+  <div>
+    <h2>Cómo funciona</h2>
+    <p style="color:var(--paper-dim)">Mide tu muñeca, introduce el número en centímetros y la calculadora cruza esa medida con proporciones habituales de relojería para sugerirte un rango de diámetro de caja cómodo, sin que se vea ni demasiado pequeño ni desproporcionado.</p>
+  </div>
+  <div>
+    <h2>Ideas de uso</h2>
+    <ul class="plain pros">
+      <li>Antes de comprar tu primer reloj automático</li>
+      <li>Para saber si un modelo que te gusta encajará con tu muñeca</li>
+      <li>Para comparar el rango recomendado con los relojes de nuestras fichas</li>
+    </ul>
+  </div>
+</div></section>
+<section><div class="wrap"><h2>Preguntas frecuentes</h2><h3>¿Cómo mido la circunferencia de mi muñeca?</h3><p style='color:var(--paper-dim)'>Rodea tu muñeca con una cinta métrica flexible (o un hilo y luego mídelo con una regla), justo por donde apoya el reloj, sin apretar.</p>
+<h3>¿El resultado es una medida exacta?</h3><p style='color:var(--paper-dim)'>Es una recomendación orientativa basada en proporciones habituales. El gusto personal y el estilo del reloj (deportivo, de vestir) también influyen.</p>
+<h3>¿Por qué dos relojes del mismo diámetro se ven distintos en la muñeca?</h3><p style='color:var(--paper-dim)'>El lug-to-lug (la distancia de extremo a extremo de la caja) y el grosor también afectan a cómo se percibe el tamaño, no solo el diámetro.</p></div></section>
+<div class="wrap"><div class="ad-slot" style="height:80px;max-width:300px;margin:0 auto 40px;">Espacio publicitario — esquina/lateral (AdSense)</div></div>
 </div>
 <footer class="site">
   <div class="wrap">
@@ -52,7 +80,12 @@
   </div>
 </footer>
 <script>document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("navToggle").onclick = ()=> document.getElementById("navLinks").classList.toggle("open");</script>
+document.getElementById("navToggle").onclick = ()=>{
+  const links = document.getElementById("navLinks");
+  const btn = document.getElementById("navToggle");
+  const open = links.classList.toggle("open");
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+};</script>
 <script src="/js/herramienta.js"></script>
 </body>
 </html>
