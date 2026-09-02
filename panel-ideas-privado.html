@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de ideas (privado)</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<style>
+  .gate{min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;}
+  .gate input{padding:12px;background:var(--ink-soft);border:1px solid var(--line);color:var(--paper);font-size:1rem;}
+  .idea-row{border-top:1px solid var(--line);padding:24px 0;}
+  .idea-row:last-child{border-bottom:1px solid var(--line);}
+  .tag{display:inline-block;font-size:0.75rem;padding:3px 10px;border-radius:2px;margin-right:8px;margin-bottom:8px;}
+  .tag.ok{background:rgba(176,141,87,0.18);color:var(--bronze-soft);}
+  .tag.espera{background:rgba(140,74,56,0.18);color:#c98c78;}
+  .tag.no{background:rgba(124,139,153,0.18);color:var(--steel);}
+</style>
+</head>
+<body>
+<div id="gate" class="gate wrap">
+  <h1 style="font-size:1.4rem;">Acceso privado</h1>
+  <p style="color:var(--paper-dim);max-width:40ch;text-align:center;">Esto no es una contraseña de verdad (es una página estática, no hay servidor), solo un filtro contra visitas casuales o buscadores. No pongas aquí nada sensible de verdad.</p>
+  <input type="password" id="pass" placeholder="Clave">
+  <button class="btn btn-primary" onclick="check()">Entrar</button>
+</div>
+
+<div id="content" style="display:none;">
+  <div class="wrap" style="padding-top:48px;padding-bottom:56px;max-width:820px;">
+    <h1 style="font-size:1.8rem;">Panel de ideas a implementar</h1>
+    <p style="color:var(--paper-dim)">Ideas inspiradas en sistemas de crecimiento autónomo (analítica + Twitter + SEO auto-gestionado), evaluadas para el estado actual de Calibre &amp; Correa: web nueva, sin tráfico confirmado todavía, y con el tema del visado J-1 pendiente de resolver antes de monetizar o promocionar activamente.</p>
+
+    <div class="idea-row">
+      <span class="tag ok">Hacer ya</span>
+      <h2 style="font-size:1.2rem;">Panel de analítica con seguimiento por enlace (UTM)</h2>
+      <p style="color:var(--paper-dim)">Centralizar de dónde viene cada visita (Twitter, Google, directo) y cuánto tiempo se queda. No hace falta un panel a medida: Google Analytics 4 + parámetros UTM en cada enlace que compartas ya lo cubren gratis. Un panel propio solo compensa cuando el volumen de datos supere lo que GA4 muestra con claridad.</p>
+      <p style="color:var(--steel);font-size:0.85rem;">Coste: 0€ · Riesgo: ninguno · Depende de: nada, se puede montar hoy.</p>
+    </div>
+
+    <div class="idea-row">
+      <span class="tag espera">Esperar</span>
+      <h2 style="font-size:1.2rem;">Bot de respuestas con IA para Twitter/X</h2>
+      <p style="color:var(--paper-dim)">La IA detecta tweets con muchas impresiones y pocas respuestas, redacta una respuesta con enlace de seguimiento, y tú la publicas con un clic (la publicación no se automatiza, Twitter no lo permite). Estrategia de crecimiento real y barata en teoría, pero con dos bloqueos ahora mismo.</p>
+      <p style="color:var(--steel);font-size:0.85rem;">Coste: la API de Twitter/X ya no es gratis (~100$/mes el plan básico) · Riesgo: es actividad activa de crecimiento de negocio · Depende de: resolver el tema del visado J-1 y asignar presupuesto.</p>
+    </div>
+
+    <div class="idea-row">
+      <span class="tag no">No implementar así</span>
+      <h2 style="font-size:1.2rem;">Sistema autónomo de artículos SEO (publica y reescribe solo)</h2>
+      <p style="color:var(--paper-dim)">Cada noche, en base a Search Console, decide crear, fusionar o borrar artículos sin revisión humana. Google penaliza explícitamente el contenido masivo generado por IA sin supervisión editorial. Con una web nueva de 3 productos, esto es la forma más rápida de que Google marque el dominio como spam antes de que le dé tiempo a posicionar nada.</p>
+      <p style="color:var(--steel);font-size:0.85rem;">Alternativa segura: que la IA te sugiera qué artículos crear o mejorar según Search Console, revisas tú el texto, y publicas tú a mano. Reevaluar cuando el sitio tenga autoridad real y volumen de contenido.</p>
+    </div>
+
+    <div class="idea-row">
+      <span class="tag ok">Pendiente de revisar</span>
+      <h2 style="font-size:1.2rem;">Spec de extensión de Chrome (captura que enviaste)</h2>
+      <p style="color:var(--paper-dim)">La captura que compartiste describe una extensión de Chrome para rastrear vídeos "outlier" de YouTube (con datos de vidIQ), no algo directamente relacionado con relojes. La dejo anotada aquí por si era solo un ejemplo del nivel de detalle de un buen encargo, o si de verdad quieres esa extensión como proyecto aparte — dímelo y lo tratamos en su propio hilo.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function check(){
+  if(document.getElementById("pass").value.trim() === "reloj2026"){
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }else{
+    alert("Clave incorrecta.");
+  }
+}
+</script>
+</body>
+</html>
