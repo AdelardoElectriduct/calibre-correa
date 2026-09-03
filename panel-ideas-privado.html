@@ -16,6 +16,7 @@
   .tag.ok{background:rgba(176,141,87,0.18);color:var(--bronze-soft);}
   .tag.espera{background:rgba(140,74,56,0.18);color:#c98c78;}
   .tag.no{background:rgba(124,139,153,0.18);color:var(--steel);}
+  .tag.hecho{background:rgba(90,140,90,0.22);color:#8fcf8f;}
 </style>
 </head>
 <body>
@@ -29,33 +30,36 @@
 <div id="content" style="display:none;">
   <div class="wrap" style="padding-top:48px;padding-bottom:56px;max-width:820px;">
     <h1 style="font-size:1.8rem;">Panel de ideas a implementar</h1>
-    <p style="color:var(--paper-dim)">Ideas inspiradas en sistemas de crecimiento autónomo (analítica + Twitter + SEO auto-gestionado), evaluadas para el estado actual de Calibre &amp; Correa: web nueva, sin tráfico confirmado todavía, y con el tema del visado J-1 pendiente de resolver antes de monetizar o promocionar activamente.</p>
+    <p style="color:var(--paper-dim)">Estado actual: sitio publicado con 6 relojes, GA4 activo (G-8RH595PN0C), datos estructurados y caché corregida. Pendiente confirmar alta en Search Console.</p>
 
     <div class="idea-row">
-      <span class="tag ok">Hacer ya</span>
-      <h2 style="font-size:1.2rem;">Panel de analítica con seguimiento por enlace (UTM)</h2>
-      <p style="color:var(--paper-dim)">Centralizar de dónde viene cada visita (Twitter, Google, directo) y cuánto tiempo se queda. No hace falta un panel a medida: Google Analytics 4 + parámetros UTM en cada enlace que compartas ya lo cubren gratis. Un panel propio solo compensa cuando el volumen de datos supere lo que GA4 muestra con claridad.</p>
-      <p style="color:var(--steel);font-size:0.85rem;">Coste: 0€ · Riesgo: ninguno · Depende de: nada, se puede montar hoy.</p>
+      <span class="tag hecho">Hecho</span>
+      <h2 style="font-size:1.2rem;">Panel de analítica con UTM + Google Analytics 4</h2>
+      <p style="color:var(--paper-dim)">GA4 integrado en todas las páginas públicas con el ID G-8RH595PN0C. Pendiente: confirmar alta y envío del sitemap en Search Console.</p>
     </div>
 
     <div class="idea-row">
-      <span class="tag espera">Esperar</span>
-      <h2 style="font-size:1.2rem;">Bot de respuestas con IA para Twitter/X</h2>
-      <p style="color:var(--paper-dim)">La IA detecta tweets con muchas impresiones y pocas respuestas, redacta una respuesta con enlace de seguimiento, y tú la publicas con un clic (la publicación no se automatiza, Twitter no lo permite). Estrategia de crecimiento real y barata en teoría, pero con dos bloqueos ahora mismo.</p>
-      <p style="color:var(--steel);font-size:0.85rem;">Coste: la API de Twitter/X ya no es gratis (~100$/mes el plan básico) · Riesgo: es actividad activa de crecimiento de negocio · Depende de: resolver el tema del visado J-1 y asignar presupuesto.</p>
+      <span class="tag ok">En marcha (manual, gratis)</span>
+      <h2 style="font-size:1.2rem;">Contenido para Twitter/X sin bot</h2>
+      <p style="color:var(--paper-dim)">Sin API de pago: explorar tendencias a mano en la app, y pedir a Claude búsquedas puntuales de tendencias del sector cuando haga falta una idea de qué publicar o responder. Publicación siempre manual.</p>
     </div>
 
     <div class="idea-row">
       <span class="tag no">No implementar así</span>
-      <h2 style="font-size:1.2rem;">Sistema autónomo de artículos SEO (publica y reescribe solo)</h2>
-      <p style="color:var(--paper-dim)">Cada noche, en base a Search Console, decide crear, fusionar o borrar artículos sin revisión humana. Google penaliza explícitamente el contenido masivo generado por IA sin supervisión editorial. Con una web nueva de 3 productos, esto es la forma más rápida de que Google marque el dominio como spam antes de que le dé tiempo a posicionar nada.</p>
-      <p style="color:var(--steel);font-size:0.85rem;">Alternativa segura: que la IA te sugiera qué artículos crear o mejorar según Search Console, revisas tú el texto, y publicas tú a mano. Reevaluar cuando el sitio tenga autoridad real y volumen de contenido.</p>
+      <h2 style="font-size:1.2rem;">Sistema autónomo de artículos SEO</h2>
+      <p style="color:var(--paper-dim)">Descartado el modo 100% autónomo (riesgo de penalización de Google por contenido masivo sin revisión). Alternativa activa: usar Google Trends + Search Console + búsquedas puntuales para decidir qué escribir, pero redactar y publicar siempre con revisión humana.</p>
     </div>
 
     <div class="idea-row">
-      <span class="tag ok">Pendiente de revisar</span>
-      <h2 style="font-size:1.2rem;">Spec de extensión de Chrome (captura que enviaste)</h2>
-      <p style="color:var(--paper-dim)">La captura que compartiste describe una extensión de Chrome para rastrear vídeos "outlier" de YouTube (con datos de vidIQ), no algo directamente relacionado con relojes. La dejo anotada aquí por si era solo un ejemplo del nivel de detalle de un buen encargo, o si de verdad quieres esa extensión como proyecto aparte — dímelo y lo tratamos en su propio hilo.</p>
+      <span class="tag hecho">Hecho</span>
+      <h2 style="font-size:1.2rem;">Ampliar catálogo</h2>
+      <p style="color:var(--paper-dim)">Añadidos Hamilton Khaki Field Mechanical, Seiko Alpinist SPB210 y Seiko Presage SRPB41. Catálogo total: 6 relojes. Descartados por ahora los Casio A158WA-1 y MDV106 (rompen el posicionamiento de gama media-alta, aunque son buena opción futura para volumen de tráfico puro).</p>
+    </div>
+
+    <div class="idea-row">
+      <span class="tag espera">Pendiente</span>
+      <h2 style="font-size:1.2rem;">Fotos reales de producto</h2>
+      <p style="color:var(--paper-dim)">Sacar las imágenes oficiales cuando la cuenta de Amazon Associates esté aprobada. No prioritario mientras no haya tráfico que convertir.</p>
     </div>
   </div>
 </div>
