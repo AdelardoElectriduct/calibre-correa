@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Comparador de relojes | Calibre & Correa</title>
-<meta name="description" content="Compara relojes lado a lado: ficha técnica, precio y valoraciones superpuestas.">
-<link rel="canonical" href="https://calibre-correa.adelardo.workers.dev/comparador.html">
+<title>Arma tu colección de relojes perfecta | Calibre & Correa</title>
+<meta name="description" content="Elige 1, 3 o 6 relojes y descubre qué tan variada es tu colección: movimiento, categoría y rango de precio.">
+<link rel="canonical" href="https://calibre-correa.adelardo.workers.dev/mi-coleccion.html">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Comparador de relojes | Calibre & Correa">
-<meta property="og:description" content="Compara relojes lado a lado: ficha técnica, precio y valoraciones superpuestas.">
-<meta property="og:url" content="https://calibre-correa.adelardo.workers.dev/comparador.html">
+<meta property="og:title" content="Arma tu colección de relojes perfecta | Calibre & Correa">
+<meta property="og:description" content="Elige 1, 3 o 6 relojes y descubre qué tan variada es tu colección: movimiento, categoría y rango de precio.">
+<meta property="og:url" content="https://calibre-correa.adelardo.workers.dev/mi-coleccion.html">
 <meta property="og:site_name" content="Calibre & Correa">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Comparador de relojes | Calibre & Correa">
-<meta name="twitter:description" content="Compara relojes lado a lado: ficha técnica, precio y valoraciones superpuestas.">
+<meta name="twitter:title" content="Arma tu colección de relojes perfecta | Calibre & Correa">
+<meta name="twitter:description" content="Elige 1, 3 o 6 relojes y descubre qué tan variada es tu colección: movimiento, categoría y rango de precio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
   gtag('js', new Date());
   gtag('config', 'G-8RH595PN0C');
 </script>
-
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuántos relojes debería tener en mi primera colección?", "acceptedAnswer": {"@type": "Answer", "text": "No hay un número mágico, pero 3 es un punto de partida habitual: uno automático de uso diario, uno de vestir y uno resistente al agua cubre la mayoría de ocasiones sin gastar de más."}}, {"@type": "Question", "name": "¿Qué significa la puntuación de variedad?", "acceptedAnswer": {"@type": "Answer", "text": "Cruza tres cosas: cuántas categorías distintas cubres (automático, cuarzo, manual, vestir, resistente, aventura), cuántos tipos de movimiento mezclas, y cuánto rango de precio abarca tu selección. Cuanto más completa la combinación, más alta la puntuación."}}, {"@type": "Question", "name": "¿Se guarda mi colección si cierro la página?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, se guarda en tu propio navegador (no en nuestros servidores), así que la verás igual la próxima vez que entres desde el mismo dispositivo."}}]}</script>
 
 </head>
 <body>
@@ -37,8 +37,8 @@
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">Menú</button>
     <nav class="links" id="navLinks">
       <a href="/index.html">Inicio</a>
-      <a href="/comparador.html" class="active">Comparador</a>
-      <a href="/mi-coleccion.html">Mi colección</a>
+      <a href="/comparador.html">Comparador</a>
+      <a href="/mi-coleccion.html" class="active">Mi colección</a>
       <a href="/categoria-automaticos.html">Categorías</a>
       <a href="/guia-relojes-automaticos-entrada.html">Guías</a>
       <a href="/herramienta-talla-reloj.html">Herramienta</a>
@@ -48,15 +48,24 @@
 </header>
 <div id="app">
 <div class="wrap" style="padding-top:40px;">
-  <div class="section-head"><h2>Comparador</h2><div class="sub">Selecciona hasta 3 relojes para verlos lado a lado.</div></div>
-  <div class="compare-picker" id="chips"><label class="pick-chip"><input type="checkbox" value="seiko-5-sports"> Seiko 5 Sports Automático (SRPD)</label>
-<label class="pick-chip"><input type="checkbox" value="citizen-tsuyosa"> Citizen Tsuyosa Automático NJ0151-53M</label>
-<label class="pick-chip"><input type="checkbox" value="tissot-prx-quartz"> Tissot PRX Cuarzo T137.410.11.041.00</label>
-<label class="pick-chip"><input type="checkbox" value="hamilton-khaki-field-mechanical"> Hamilton Khaki Field Mechanical H69439931</label>
-<label class="pick-chip"><input type="checkbox" value="seiko-alpinist-spb210"> Seiko Prospex Alpinist SPB210</label>
-<label class="pick-chip"><input type="checkbox" value="seiko-presage-srpb41"> Seiko Presage Cocktail Time SRPB41</label></div>
-  <div id="compareOut"><p class="empty-note">Elige dos o tres relojes arriba para verlos enfrentados.</p></div>
+  <div class="section-head"><h2>Arma tu colección perfecta</h2><div class="sub">Elige cuántos relojes quieres en tu caja (1, 3 o 6) y ve seleccionando para ver qué tan completa es tu combinación.</div></div>
+
+  <div class="size-picker">
+    <label><input type="radio" name="boxsize" value="1"><span>Caja de 1</span></label>
+    <label><input type="radio" name="boxsize" value="3" checked><span>Caja de 3</span></label>
+    <label><input type="radio" name="boxsize" value="6"><span>Caja de 6</span></label>
+  </div>
+
+  <h3 style="font-size:1.1rem;">Tu roller</h3>
+  <div class="roller-slots" id="rollerSlots"></div>
+  <div id="scoreBlock"></div>
+
+  <h3 style="font-size:1.1rem;margin-top:36px;">Elige tus relojes</h3>
+  <div class="picker-grid" id="pickerGrid"></div>
 </div>
+<section><div class="wrap"><h2>Preguntas frecuentes</h2><h3>¿Cuántos relojes debería tener en mi primera colección?</h3><p style='color:var(--paper-dim)'>No hay un número mágico, pero 3 es un punto de partida habitual: uno automático de uso diario, uno de vestir y uno resistente al agua cubre la mayoría de ocasiones sin gastar de más.</p>
+<h3>¿Qué significa la puntuación de variedad?</h3><p style='color:var(--paper-dim)'>Cruza tres cosas: cuántas categorías distintas cubres (automático, cuarzo, manual, vestir, resistente, aventura), cuántos tipos de movimiento mezclas, y cuánto rango de precio abarca tu selección. Cuanto más completa la combinación, más alta la puntuación.</p>
+<h3>¿Se guarda mi colección si cierro la página?</h3><p style='color:var(--paper-dim)'>Sí, se guarda en tu propio navegador (no en nuestros servidores), así que la verás igual la próxima vez que entres desde el mismo dispositivo.</p></div></section>
 </div>
 <footer class="site">
   <div class="wrap">
@@ -77,7 +86,6 @@ document.getElementById("navToggle").onclick = ()=>{
   btn.setAttribute("aria-expanded", open ? "true" : "false");
 };</script>
 <script>const PRODUCTS = [{"id": "seiko-5-sports", "marca": "Seiko", "modelo": "5 Sports Automático (SRPD)", "initials": "S5", "color": "#5b6b7a", "precio": "229", "hook": "El clásico de entrada: automático japonés fiable y con estética de buceo.", "categorias": ["automaticos", "resistentes"], "specs": [["Movimiento", "Automático Seiko Calibre 4R36"], ["Reserva de marcha", "41 horas"], ["Diámetro de caja", "42,5 mm"], ["Grosor", "13,4 mm"], ["Resistencia al agua", "100 m"], ["Cristal", "Hardlex mineral"], ["Correa", "Acero inoxidable / NATO / caucho (según versión)"], ["Fondo", "Transparente (visible el movimiento)"]], "pros": ["Movimiento automático propio, sin batería", "100 m de resistencia al agua para uso diario y baño", "Precio de entrada dentro de la relojería mecánica seria", "Piezas y servicio técnico Seiko fáciles de encontrar"], "contras": ["El cristal Hardlex se raya más que un zafiro", "Precisión de gama de entrada (varios segundos al día)", "Corona sin rosca: no es un reloj de inmersión certificado"], "ideal": "Quien quiere su primer reloj automático de verdad sin asumir el salto de precio a marcas suizas.", "resenas": "Las reseñas coinciden en el mismo patrón: la relación calidad-precio y la solidez del 4R36 se valoran mucho más que el acabado del cristal, que es el punto que más se repite como mejorable.", "val": {"diseno": 7, "robustez": 8, "precision": 6, "versatilidad": 8, "precio": 9}, "enlace": "https://www.amazon.com/dp/B0DNNSBCNP"}, {"id": "citizen-tsuyosa", "marca": "Citizen", "modelo": "Tsuyosa Automático NJ0151-53M", "initials": "CT", "color": "#7c95a8", "precio": "329", "hook": "Brazalete integrado años 70 con un acabado que parece de una gama superior.", "categorias": ["automaticos", "vestir"], "specs": [["Movimiento", "Automático Citizen Calibre 8210"], ["Reserva de marcha", "40 horas"], ["Diámetro de caja", "40 mm"], ["Grosor", "≈ 12 mm"], ["Resistencia al agua", "50 m"], ["Cristal", "Zafiro con tratamiento antirreflejante"], ["Correa", "Brazalete integrado de acero"], ["Fondo", "Transparente (visible el movimiento)"]], "pros": ["Diseño de brazalete integrado poco habitual a este precio", "Cristal de zafiro, más resistente a los arañazos que el mineral", "Acabado y proporciones que se perciben por encima de su gama", "Muy cómodo por el diseño en cuña del brazalete"], "contras": ["50 m de resistencia al agua es justo para nadar, no para bucear", "El brazalete integrado no admite cualquier correa de repuesto", "El cierre no tiene micro-ajuste"], "ideal": "Quien busca un reloj con más personalidad de diseño que un deportivo clásico, para uso de oficina y diario.", "resenas": "El comentario más repetido en reseñas es la sorpresa por el acabado del brazalete integrado a este precio; el punto débil que más se menciona es la resistencia al agua limitada frente a otros automáticos de la misma franja.", "val": {"diseno": 9, "robustez": 6, "precision": 6, "versatilidad": 7, "precio": 8}, "enlace": "https://www.amazon.com/dp/B0CDCQ1N3H"}, {"id": "tissot-prx-quartz", "marca": "Tissot", "modelo": "PRX Cuarzo T137.410.11.041.00", "initials": "TP", "color": "#b08d57", "precio": "395", "hook": "El icónico diseño de los 70 con la precisión y el bajo mantenimiento del cuarzo suizo.", "categorias": ["cuarzo", "vestir", "resistentes"], "specs": [["Movimiento", "Cuarzo suizo ETA F06.115"], ["Reserva de marcha", "No aplica (batería)"], ["Diámetro de caja", "40 x 39,5 mm (tonneau)"], ["Grosor", "10,4 mm"], ["Resistencia al agua", "100 m"], ["Cristal", "Zafiro con tratamiento antirreflejante"], ["Correa", "Brazalete de acero de liberación rápida"], ["Fondo", "Cerrado"]], "pros": ["Precisión de cuarzo suizo, mantenimiento mínimo", "Diseño tonneau reconocible inspirado en Gérald Genta", "100 m de resistencia al agua, el más alto de los tres", "Brazalete de liberación rápida, fácil de cambiar por correa"], "contras": ["Al ser de cuarzo pierde el atractivo mecánico para algunos coleccionistas", "La batería hay que sustituirla cada varios años", "Es el más caro de los tres comparados"], "ideal": "Quien prioriza el diseño y la precisión diaria por encima de tener un movimiento mecánico.", "resenas": "En las reseñas se repite el mismo argumento: el diseño del caso tonneau es el motivo de compra número uno, y el debate recurrente es si merece la pena frente a la versión automática Powermatic 80 de la misma familia.", "val": {"diseno": 9, "robustez": 8, "precision": 9, "versatilidad": 8, "precio": 7}, "enlace": "https://www.amazon.com/dp/B08TB1MF6F"}, {"id": "hamilton-khaki-field-mechanical", "marca": "Hamilton", "modelo": "Khaki Field Mechanical H69439931", "initials": "HK", "color": "#5a6b4f", "precio": "575", "hook": "La puerta de entrada real a la relojería suiza, con una reserva de marcha de 80 horas.", "categorias": ["manual"], "specs": [["Movimiento", "Manual (cuerda a mano) Hamilton Calibre H-50"], ["Reserva de marcha", "80 horas"], ["Diámetro de caja", "38 mm"], ["Grosor", "9,5 mm"], ["Resistencia al agua", "50 m"], ["Cristal", "Zafiro"], ["Correa", "NATO de tela verde"], ["Fondo", "Cerrado"]], "pros": ["Reserva de marcha de 80 horas, de las más altas de esta comparativa", "Puerta de entrada real a la relojería suiza (grupo Swatch)", "Diseño militar atemporal que no pasa de moda", "Cristal de zafiro a un precio donde no es habitual"], "contras": ["Es de cuerda manual: hay que darle cuerda a mano cada día o dos, no es automático", "50 m de resistencia al agua, ajustado para su precio", "El fondo cerrado no deja ver el movimiento"], "ideal": "Quien quiere dar el salto a la relojería suiza de verdad y no le importa la ceremonia diaria de dar cuerda a mano.", "resenas": "En las reseñas se repite el mismo elogio: la reserva de marcha de 80 horas sorprende para su precio, y el debate habitual es si preferir esta versión de cuerda manual o esperar a una automática de la misma colección.", "val": {"diseno": 8, "robustez": 7, "precision": 6, "versatilidad": 6, "precio": 7}, "enlace": "https://www.amazon.com/dp/B07HSPSX5M"}, {"id": "seiko-alpinist-spb210", "marca": "Seiko", "modelo": "Prospex Alpinist SPB210", "initials": "SA", "color": "#4a6b52", "precio": "650", "hook": "Bisel interior con brújula y 200 m de resistencia: el más premium y aventurero de la comparativa.", "categorias": ["automaticos", "resistentes", "aventura"], "specs": [["Movimiento", "Automático Seiko Calibre 6R35 (con cuerda manual)"], ["Reserva de marcha", "70 horas"], ["Diámetro de caja", "39,5 mm"], ["Grosor", "13,2 mm"], ["Resistencia al agua", "200 m"], ["Cristal", "Zafiro con antirreflejante"], ["Correa", "Piel marrón"], ["Fondo", "Transparente (visible el movimiento)"]], "pros": ["Bisel interior giratorio con brújula, una función realmente útil al aire libre", "200 m de resistencia al agua, el más alto de toda la comparativa", "70 horas de reserva de marcha", "Movimiento visible a través del fondo transparente"], "contras": ["Es el más caro de los relojes recomendados aquí", "13,2 mm de grosor, se nota bajo el puño de una camisa", "La correa de piel no es la mejor opción para nadar o bucear"], "ideal": "Quien quiere un reloj de aventura de verdad, no solo con estética deportiva, para senderismo o montaña.", "resenas": "La función de brújula en el bisel interior es lo más comentado en las reseñas, junto con lo cómodo que resulta a pesar de su grosor gracias a las asas cortas.", "val": {"diseno": 9, "robustez": 8, "precision": 7, "versatilidad": 7, "precio": 6}, "enlace": "https://www.amazon.com/dp/B09SDMGQ3V"}, {"id": "seiko-presage-srpb41", "marca": "Seiko", "modelo": "Presage Cocktail Time SRPB41", "initials": "SP", "color": "#3a5a8c", "precio": "350", "hook": "Un dial azul lacado en siete capas que llama la atención sin renunciar a la elegancia.", "categorias": ["automaticos", "vestir"], "specs": [["Movimiento", "Automático Seiko Calibre 4R35"], ["Reserva de marcha", "41 horas"], ["Diámetro de caja", "40,5 mm"], ["Grosor", "11,8 mm"], ["Resistencia al agua", "50 m"], ["Cristal", "Hardlex con forma de caja"], ["Correa", "Brazalete de acero"], ["Fondo", "Transparente (visible el movimiento)"]], "pros": ["Dial azul texturizado con acabado de siete capas de laca, muy poco habitual a este precio", "Corona con mucho par de apriete, se siente premium al dar cuerda", "Diseño de vestir elegante sin resultar aburrido", "Buena puerta de entrada a la línea Presage de Seiko"], "contras": ["Cristal Hardlex, no zafiro, pese a ser gama Presage", "41 horas de reserva, la más ajustada de esta comparativa", "50 m de resistencia al agua, solo para uso diario, no para nadar con confianza"], "ideal": "Quien quiere un reloj de vestir con un dial que llame la atención, sin llegar al precio de un dress watch suizo.", "resenas": "El dial es, con diferencia, lo más elogiado en las reseñas; el debate habitual es si el cristal debería haber sido de zafiro dado el posicionamiento de la línea Presage.", "val": {"diseno": 9, "robustez": 6, "precision": 6, "versatilidad": 7, "precio": 8}, "enlace": "https://www.amazon.com/dp/B074KL4SP6"}];</script>
-<script src="/js/radar.js"></script>
-<script src="/js/comparador.js"></script>
+<script src="/js/collection.js"></script>
 </body>
 </html>
