@@ -6,6 +6,7 @@ if(dial){
     t.style.transform = `rotate(${i*30}deg)`;
     dial.appendChild(t);
   }
+  // Hora real del dispositivo de quien visita la web (su zona horaria local).
   const now = new Date();
   const hourHand = document.createElement("div");
   hourHand.className = "hand short";
