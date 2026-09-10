@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sugiere un reloj | Calibre & Correa</title>
+<meta name="description" content="¿Qué reloj te gustaría ver analizado en Calibre & Correa? Cuéntanoslo.">
+<link rel="canonical" href="https://calibre-correa.adelardo.workers.dev/sugiere-un-reloj.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sugiere un reloj | Calibre & Correa">
+<meta property="og:description" content="¿Qué reloj te gustaría ver analizado en Calibre & Correa? Cuéntanoslo.">
+<meta property="og:url" content="https://calibre-correa.adelardo.workers.dev/sugiere-un-reloj.html">
+<meta property="og:site_name" content="Calibre & Correa">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sugiere un reloj | Calibre & Correa">
+<meta name="twitter:description" content="¿Qué reloj te gustaría ver analizado en Calibre & Correa? Cuéntanoslo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8RH595PN0C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8RH595PN0C');
+</script>
+
+
+</head>
+<body>
+<header class="site">
+  <div class="navbar">
+    <a href="/index.html" class="brand">Calibre <span>&amp;</span> Correa</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">Menú</button>
+    <nav class="links" id="navLinks">
+      <a href="/index.html">Inicio</a>
+      <a href="/comparador.html">Comparador</a>
+      <a href="/mi-coleccion.html">Mi colección</a>
+      <a href="/categoria-automaticos.html">Categorías</a>
+      <a href="/guia-relojes-automaticos-entrada.html">Guías</a>
+      <a href="/herramienta-talla-reloj.html">Herramienta</a>
+      <a href="/ofertas.html">Ofertas</a>
+    </nav>
+  </div>
+</header>
+<div id="app">
+<div class="wrap" style="padding-top:40px;padding-bottom:56px;max-width:640px;">
+  <div class="section-head"><h2>Sugiere un reloj</h2><div class="sub">¿Hay un reloj que te gustaría ver analizado en la web? Cuéntanoslo, lo leemos todo.</div></div>
+  <form id="sugForm" class="tool-box" style="max-width:100%;">
+    <label for="reloj">Marca y modelo</label>
+    <input type="text" id="reloj" name="reloj" required placeholder="Ej: Orient Bambino, Casio Duro...">
+    <label for="motivo">¿Por qué te gustaría verlo aquí?</label>
+    <input type="text" id="motivo" name="motivo" placeholder="Opcional">
+    <label for="email">Tu email (opcional, por si queremos avisarte)</label>
+    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com">
+    <input type="text" name="_gotcha" style="display:none">
+    <button class="btn btn-primary" type="submit" id="sugBtn">Enviar sugerencia</button>
+    <div id="sugMsg" role="status" aria-live="polite" style="margin-top:14px;"></div>
+  </form>
+</div>
+</div>
+<footer class="site">
+  <div class="wrap">
+    <div>&copy; <span id="year"></span> Calibre &amp; Correa</div>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;">
+      <a href="/sobre-nosotros.html">Sobre nosotros</a>
+      <a href="/sugiere-un-reloj.html">Sugiere un reloj</a>
+      <a href="/aviso-legal-afiliados.html">Aviso legal de afiliados</a>
+      <a href="/guia-relojes-automaticos-entrada.html">Guías de compra</a>
+      <a href="/comparador.html">Comparador</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("navToggle").onclick = ()=>{
+  const links = document.getElementById("navLinks");
+  const btn = document.getElementById("navToggle");
+  const open = links.classList.toggle("open");
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+};</script>
+<script>
+const form = document.getElementById("sugForm");
+form.addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  const btn = document.getElementById("sugBtn");
+  const msg = document.getElementById("sugMsg");
+  btn.disabled = true; btn.textContent = "Enviando...";
+  try{
+    const res = await fetch("https://formspree.io/f/mgaedklq", {
+      method: "POST",
+      headers: {"Accept":"application/json"},
+      body: new FormData(form)
+    });
+    if(res.ok){
+      form.reset();
+      form.style.display = "none";
+      msg.innerHTML = '<div class="tool-result">¡Gracias! Hemos recibido tu sugerencia.</div>';
+    }else{
+      msg.innerHTML = '<div class="tool-result">Algo ha fallado, inténtalo de nuevo en un momento.</div>';
+      btn.disabled = false; btn.textContent = "Enviar sugerencia";
+    }
+  }catch(err){
+    msg.innerHTML = '<div class="tool-result">Algo ha fallado, inténtalo de nuevo en un momento.</div>';
+    btn.disabled = false; btn.textContent = "Enviar sugerencia";
+  }
+});
+</script>
+</body>
+</html>
