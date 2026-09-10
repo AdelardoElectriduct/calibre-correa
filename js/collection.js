@@ -29,7 +29,7 @@ function renderRoller(){
     const id = state.sel[i];
     if(id){
       const p = PRODUCTS.find(x=>x.id===id);
-      html += `<div class="roller-slot" style="background:${p.color}">${p.initials}<br><span style="font-size:0.6rem;font-weight:400;">${p.marca}</span></div>`;
+      html += `<div class="roller-slot" style="background:${p.color}" ontouchstart="this.classList.toggle('tilted')">${p.initials}<br><span style="font-size:0.6rem;font-weight:400;">${p.marca}</span></div>`;
     }else{
       html += `<div class="roller-slot empty">+</div>`;
     }
