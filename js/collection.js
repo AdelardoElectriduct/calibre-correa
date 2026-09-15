@@ -29,7 +29,7 @@ function renderRoller(){
     const id = state.sel[i];
     if(id){
       const p = PRODUCTS.find(x=>x.id===id);
-      html += `<div class="roller-slot" style="background:${p.color}" ontouchstart="this.classList.toggle('tilted')">${p.initials}<br><span style="font-size:0.6rem;font-weight:400;">${p.marca}</span></div>`;
+      html += `<div class="roller-slot" ontouchstart="this.classList.toggle('tilted')">${p.illustration}<span class="rname">${p.marca}</span></div>`;
     }else{
       html += `<div class="roller-slot empty">+</div>`;
     }
@@ -100,7 +100,7 @@ function renderPicker(){
 }
 
 function watchfaceHtml(p){
-  return `<div class="watchface" style="background:${p.color};width:52px;height:52px;font-size:0.9rem;">${p.initials}</div>`;
+  return `<div class="watchface" style="width:52px;height:52px;">${p.illustration}</div>`;
 }
 
 function toggle(id){
