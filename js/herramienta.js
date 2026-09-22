@@ -19,7 +19,7 @@ document.getElementById("calcBtn").addEventListener("click", ()=>{
         <p style="color:var(--paper-dim);font-size:0.9rem;margin-bottom:10px;">De nuestro catálogo, estos encajan en ese rango:</p>
         <div class="picker-grid">${matches.map(p => `
           <div class="picker-card">
-            <div class="top"><div class="watchface" style="width:52px;height:52px;">${p.illustration}</div>
+            <div class="top"><a href="/reloj-${p.id}.html" aria-hidden="true" tabindex="-1"><div class="watchface" style="width:52px;height:52px;">${p.illustration}</div></a>
             <div><h4>${p.marca} ${p.modelo}</h4><div class="meta">${p.precio} € · ${p.diametro_mm} mm</div></div></div>
             <a href="/reloj-${p.id}.html" class="btn btn-ghost" style="text-align:center;">Ver ficha</a>
           </div>`).join("")}</div>

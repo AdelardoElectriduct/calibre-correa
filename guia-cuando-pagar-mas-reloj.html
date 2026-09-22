@@ -29,11 +29,13 @@
 </script>
 
 
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 </head>
 <body>
 <header class="site">
   <div class="navbar">
     <a href="/index.html" class="brand">Calibre <span>&amp;</span> Correa</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar a modo claro">☀️</button>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">Menú</button>
     <nav class="links" id="navLinks">
       <a href="/index.html">Inicio</a>
@@ -88,5 +90,6 @@ document.getElementById("navToggle").onclick = ()=>{
   btn.setAttribute("aria-expanded", open ? "true" : "false");
 };</script>
 
+<script src="/js/theme-toggle.js"></script>
 </body>
 </html>

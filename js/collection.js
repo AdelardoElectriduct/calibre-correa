@@ -92,7 +92,8 @@ function renderPicker(){
     const full = state.sel.length >= state.size;
     const disabled = (!isIn && full) ? "disabled" : "";
     return `<div class="picker-card">
-      <div class="top">${watchfaceHtml(p)}<div><h4>${p.marca} ${p.modelo}</h4><div class="meta">${p.precio} €</div></div></div>
+      <div class="top"><a href="/reloj-${p.id}.html" aria-hidden="true" tabindex="-1"><div class="watchface" style="width:52px;height:52px;">${p.illustration}</div></a>
+      <div><h4>${p.marca} ${p.modelo}</h4><div class="meta">${p.precio} €</div></div></div>
       <button class="${isIn?'added':''}" ${disabled} onclick="toggle('${p.id}')">${isIn ? "Quitar de la caja" : "Añadir a la caja"}</button>
       <a href="/reloj-${p.id}.html" style="font-size:0.78rem;color:var(--steel);">Ver ficha</a>
     </div>`;
