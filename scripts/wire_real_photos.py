@@ -20,6 +20,9 @@ WATCHES = {
     "Hamilton Khaki Field Mechanical H69439931": ("hamilton-khaki-field-mechanical-real.jpg", "Hamilton Khaki Field Mechanical"),
     "Orient Bambino Versión 5 RA-AC0001S10A": ("orient-bambino-v5-real.jpg", "Orient Bambino Versión 5"),
     "Seiko Presage Cocktail Time SRPB41": ("seiko-presage-srpb41-real.jpg", "Seiko Presage Cocktail Time"),
+    "Baltic Aquascaphe MK2": ("baltic-aquascaphe-mk2-real.png", "Baltic Aquascaphe MK2"),
+    "Seiko 5 Sports Automático (SRPD)": ("seiko-5-sports-real.png", "Seiko 5 Sports"),
+    "Seiko Prospex Alpinist SPB210": ("seiko-alpinist-spb210-real.png", "Seiko Prospex Alpinist"),
 }
 
 # slug del png antiguo (mal etiquetado) -> slug del jpg real nuevo, para
@@ -30,6 +33,9 @@ OLD_PNG = {
     "hamilton-khaki-field-mechanical.png": "hamilton-khaki-field-mechanical-real.jpg",
     "orient-bambino-v5.png": "orient-bambino-v5-real.jpg",
     "seiko-presage-srpb41.png": "seiko-presage-srpb41-real.jpg",
+    "baltic-aquascaphe-mk2.png": "baltic-aquascaphe-mk2-real.png",
+    "seiko-5-sports.png": "seiko-5-sports-real.png",
+    "seiko-alpinist-spb210.png": "seiko-alpinist-spb210-real.png",
 }
 
 WATCHFACE_RE_TMPL = (
