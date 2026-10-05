@@ -34,7 +34,7 @@ function renderCompare(){
     <table class="compare-table">
       <tr><th></th>${elegidos.map(p=>`<th>${p.marca}<br>${p.modelo}</th>`).join("")}</tr>
       ${filas}
-      <tr><td></td>${elegidos.map(p=>`<td><a class="btn btn-primary" style="padding:8px 14px;font-size:0.85rem;" href="${p.enlace}" target="_blank" rel="nofollow noopener">Ver en Amazon</a></td>`).join("")}</tr>
+      <tr><td></td>${elegidos.map(p=>`<td><a class="btn btn-primary" style="padding:8px 14px;font-size:0.85rem;" href="${p.enlace}" target="_blank" rel="nofollow noopener">${p.es_microbrand ? "Ver en la web de la marca" : "Ver en Amazon"}</a></td>`).join("")}</tr>
     </table>
     <h2 style="margin-top:40px;">Valoraciones superpuestas</h2>
     <canvas class="radar" id="radarCompare" style="max-width:440px;"></canvas>
