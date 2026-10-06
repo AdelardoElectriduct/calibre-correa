@@ -259,7 +259,7 @@ def build_product_page(p, products_by_id) -> str:
     full = f'{p["marca"]} {p["modelo"]}'
     url = f"{BASE}/reloj-{p['id']}.html"
     img_url = f"{BASE}/{p['image_url']}?v=2"
-    title = f"{full}: ficha técnica y valoración | Calibre & Correa"
+    title = f"{full}: ficha y opinión"
     desc = f"Ficha completa del {full}: especificaciones, pros y contras, y para quién es ideal."
 
     # --- cabecera (metas) ---
